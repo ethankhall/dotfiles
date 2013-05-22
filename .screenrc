@@ -1,0 +1,22 @@
+vbell off        # turns off the flashing visual bell
+
+# Open several named screens at startup and run different commands in each
+screen -t bash1 1 zsh
+screen -t bash2 2 zsh
+screen -t bash3 3 zsh
+screen -t bash4 4 zsh
+screen -t root 5 sudo su
+select 1
+
+autodetach on
+defscrollback 10000
+startup_message off
+altscreen on
+term screen-256color
+
+bind s
+termcapinfo xterm ti@:te@
+
+hardstatus alwayslastline 
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
