@@ -52,7 +52,7 @@ HISTFILE=~/.history
 #############
 ##   Git   ##
 #############
-source /home/ethan/.zsh/.zsh_shouse_prompt
+source  $HOME/.zsh/.zsh_shouse_prompt
 
 #############
 ##   PS1   ##
@@ -73,4 +73,5 @@ export EDITOR=vim
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/boxen/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
