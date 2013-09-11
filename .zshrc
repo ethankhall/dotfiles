@@ -70,8 +70,10 @@ export EDITOR=vim
 ###############
 ##   alias   ##
 ###############
-alias ls='ls --color=auto'
-alias grep='grep --colour=auto'
+
+### Linux Alias ###
+#alias ls='ls --color=auto'
+#alias grep='grep --colour=auto'
 
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/boxen/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
