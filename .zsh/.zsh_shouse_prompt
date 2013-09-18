@@ -24,7 +24,7 @@ local -a pr_llines pr_rlines
 # zstyle ':vcs_info:*+*:*' debug true
 # zstyle ':pr_nethack:*' debug true
 
-zstyle ":pr_nethack:" mode compact # other modes: compact, bare, full
+zstyle ":pr_nethack:" mode full # other modes: compact, bare, full
 zstyle ':pr_nethack:*' hooks pwd usr vcs venv jobs prompt
 zstyle ':pr_nethack:*' pet "d" # A domestic animal, the _tame dog_ (_Canis familiaris_)
 zstyle ':pr_nethack:*' pwd "%~"
@@ -114,15 +114,11 @@ function +pr-mode-full() {
         "${gray}${pr_com[vcs]}${reset}"
     )
 
-    # Add dungeon floor to each line
-    dungeon=${(l:$(( ${#lines} * 3 ))::.:)}
-    dungeon[$[${RANDOM}%${#dungeon}]+1]=$pet
-
     for (( i=1; i < $(( ${#lines} + 1 )); i++ )) ; do
         case $i in
             1) x=1;; 2) x=4;; 3) x=7;; 4) x=10;;
         esac
-        lines[$i]="${gray}${dungeon[x,$(( $x + 2 ))]} ${lines[$i]}${reset}"
+        lines[$i]="${gray}${lines[$i]}${reset}"
     done
 
     pr_llines=( ${lines[@]} )
