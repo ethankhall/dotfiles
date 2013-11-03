@@ -1,0 +1,17 @@
+#session1
+new  -s normal -n zsh zsh
+neww -n zsh
+neww -n zsh
+neww -n zsh
+neww -n zsh
+neww -n zsh
+neww -n zsh
+#splitw -v -p 50 -t 0 zsh
+selectw -t 01
+#selectp -t 0
+
+# session initialization
+#new zsh
+#neww zsh
+#neww zsh
+#selectw -t 1
