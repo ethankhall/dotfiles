@@ -1,0 +1,10 @@
+[push]
+        default = matching
+[alias]
+    lg = log --graph --color --full-history --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+        st = status
+        ci = commit -v
+        dv = diff --cached
+        aa = add --all
+[mergetool]
+        keepBackup = true
