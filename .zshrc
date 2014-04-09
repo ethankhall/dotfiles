@@ -43,29 +43,7 @@ zle -N zle-line-init
 zle -N zle-line-finish
 
 ## Take note 
-export NOTE_DIR=~/Documents/notes
-
-function todays_note() {
-    echo $NOTE_DIR/`date +"%Y/%B/%m-%d-%y.markdown" | tr "[A-Z]" "[a-z]"`
-}
-
-function take_note () {
-    NOTE_FILE=`todays_note`
-    NOTE_FILE_DIR=`dirname $NOTE_FILE`
- 
-    echo "Taking note in $NOTE_FILE"
-    [ -d  $NOTE_FILE_DIR ] || mkdir $NOTE_FILE_DIR
-    #Edit file
-    vim $NOTE_FILE
-    
-    #Add file to git
-    git -C $NOTE_FILE_DIR add $NOTE_FILE
-    
-    #Auto commit of there are changes
-    if ! git -C $NOTE_FILE_DIR diff-index --quiet HEAD --; then
-        git -C $NOTE_FILE_DIR commit -m "File updates to $NOTE_FILE on $(date)"
-    fi
-}
+source $HOME/.zsh/.take_note
 
 #################
 ##   History   ##
