@@ -45,12 +45,16 @@ zle -N zle-line-finish
 ## Take note 
 export NOTE_DIR=~/Documents/notes
 
+function todays_note() {
+    echo $NOTE_DIR/`date +"%Y/%B/%m-%d-%y.markdown" | tr "[A-Z]" "[a-z]"`
+}
+
 function take_note () {
-    NOTE_FILE=$NOTE_DIR/`date +"%Y/%B/%m-%d-%y.markdown" | tr "[A-Z]" "[a-z]"`
+    NOTE_FILE=`todays_note`
     NOTE_FILE_DIR=`dirname $NOTE_FILE`
+ 
     echo "Taking note in $NOTE_FILE"
-    [ -d  $NOTE_FILE_DIR ] || mkdir -p $NOTE_FILE_DIR
-    
+    [ -d  $NOTE_FILE_DIR ] || mkdir $NOTE_FILE_DIR
     #Edit file
     vim $NOTE_FILE
     
