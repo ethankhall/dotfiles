@@ -47,8 +47,9 @@ export NOTE_DIR=~/Documents/notes
 
 function take_note () {
     NOTE_FILE=$NOTE_DIR/`date +"%Y/%B/%m-%d-%y.markdown" | tr "[A-Z]" "[a-z]"`
+    NOTE_FILE_DIR=`dirname $NOTE_FILE`
     echo "Taking note in $NOTE_FILE"
-    mkdir `dirname $NOTE_FILE`
+    [ -d  $NOTE_FILE_DIR ] || mkdir $NOTE_FILE_DIR
     vim $NOTE_FILE
 }
 
