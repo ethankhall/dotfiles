@@ -57,6 +57,14 @@ HISTFILE=~/.history
 #############
 source  $HOME/.zsh/.zsh_shouse_prompt
 
+## Reverse Search
+bindkey "^R" history-incremental-search-backward
+
+
+## Color of ls
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
 #############
 ##   PS1   ##
 #############
