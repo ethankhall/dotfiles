@@ -83,7 +83,7 @@ export EDITOR=vim
 ###############
 
 ### Linux Alias ###
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 #alias grep='grep --colour=auto'
 
 if [ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
