@@ -60,6 +60,8 @@ source  $HOME/.zsh/.zsh_shouse_prompt
 ## Reverse Search
 bindkey "^R" history-incremental-search-backward
 
+## Begining of line
+bindkey "^A" beginning-of-line
 
 ## Color of ls
 export CLICOLOR=1
@@ -85,6 +87,10 @@ export EDITOR=vim
 ### Linux Alias ###
 #alias ls='ls --color=auto'
 #alias grep='grep --colour=auto'
+
+if [ -f /opt/boxen/env.sh ]; then
+    source /opt/boxen/env.sh
+fi
 
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/boxen/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
