@@ -79,6 +79,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 ##   export   ##
 ################
 export EDITOR=vim
+export PYENV_ROOT=/usr/local/opt/pyenv
 
 ###############
 ##   alias   ##
