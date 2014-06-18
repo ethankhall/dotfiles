@@ -98,3 +98,6 @@ if [ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 elif [ -e /opt/boxen/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     source /opt/boxen/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+#[[ -s "/Users/ethan/.gvm/bin/gvm-init.sh" ]] && source "/Users/ethan/.gvm/bin/gvm-init.sh"
