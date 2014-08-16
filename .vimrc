@@ -58,6 +58,10 @@ set wildignore=*.o,*~,*.pyc
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+""" NERD Tree
+execute pathogen#infect()
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
