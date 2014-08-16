@@ -9,7 +9,7 @@ PERSONAL_DIR=~/workspace/personal
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 brew doctor
-brew zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace gradle groovy tmux ssh-copy-id tree watch htop-osx ansible less wget
+brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace gradle groovy tmux ssh-copy-id tree watch htop-osx ansible less wget
 sudo chsh -s `which zsh`
 
 read -p "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
