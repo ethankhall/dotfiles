@@ -12,8 +12,7 @@ brew doctor
 brew zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace gradle groovy tmux ssh-copy-id tree watch htop-osx ansible less wget
 sudo chsh -s `which zsh`
 
-echo "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
-read
+read -p "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
 
 # Install Pathogen for VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -52,9 +51,6 @@ if [ "$(uname)" == "Darwin" ]; then
     defaults write -g ApplePressAndHoldEnabled -bool false
 fi
 
-echo "Install VirtualBox: http://www.vagrantup.com/downloads.html"
-read
-echo "Install iTerm2: http://iterm2.com/downloads.html"
-read
-echo "Install IntelliJ: http://www.jetbrains.com/idea/download/"
-read
+read -p  "Install VirtualBox: http://www.vagrantup.com/downloads.html"
+read -p  "Install iTerm2: http://iterm2.com/downloads.html"
+read -p  "Install IntelliJ: http://www.jetbrains.com/idea/download/"
