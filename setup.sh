@@ -13,7 +13,6 @@ brew doctor
 brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace gradle groovy tmux ssh-copy-id tree watch htop-osx ansible wget
 sudo chsh -s `which zsh` `whoami`
 
-read -p "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
 read -p "Press [Enter] key to continue..."
 
 # Install Pathogen for VIM
