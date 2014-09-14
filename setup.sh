@@ -52,7 +52,8 @@ if [ "$(uname)" == "Darwin" ]; then
     defaults write -g ApplePressAndHoldEnabled -bool false
 fi
 
-echo  "Install VirtualBox: http://www.vagrantup.com/downloads.html"
+echo  "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
+echo  "Install Vagrant: http://www.vagrantup.com/downloads.html"
 echo  "Install iTerm2: http://iterm2.com/downloads.html"
 echo  "Install IntelliJ: http://www.jetbrains.com/idea/download/"
 
