@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Install Chrome: https://www.google.com/chrome/browser/#eula"
+read -p "Press [Enter] key to continue..."
 
 echo "Installing Brew"
 PERSONAL_DIR=~/workspace/personal
@@ -13,6 +14,7 @@ brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-
 sudo chsh -s `which zsh`
 
 read -p "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
+read -p "Press [Enter] key to continue..."
 
 # Install Pathogen for VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -51,6 +53,8 @@ if [ "$(uname)" == "Darwin" ]; then
     defaults write -g ApplePressAndHoldEnabled -bool false
 fi
 
-read -p  "Install VirtualBox: http://www.vagrantup.com/downloads.html"
-read -p  "Install iTerm2: http://iterm2.com/downloads.html"
-read -p  "Install IntelliJ: http://www.jetbrains.com/idea/download/"
+echo  "Install VirtualBox: http://www.vagrantup.com/downloads.html"
+echo  "Install iTerm2: http://iterm2.com/downloads.html"
+echo  "Install IntelliJ: http://www.jetbrains.com/idea/download/"
+
+read -p "Press [Enter] key to continue..."
