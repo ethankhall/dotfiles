@@ -48,6 +48,10 @@ echo  "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
 echo  "Install Vagrant: http://www.vagrantup.com/downloads.html"
 echo  "Install iTerm2: http://iterm2.com/downloads.html"
 echo  "Install IntelliJ: http://www.jetbrains.com/idea/download/"
+echo  "Install iStat5: http://bjango.com/mac/istatmenus/"
+echo  "Install Bartender: http://www.macbartender.com/"
+echo  "Install Marked: http://marked2app.com/"
+echo  "Install Sizeup: http://www.irradiatedsoftware.com/downloads/?file=SizeUp.zip"
 
 read -p "Press [Enter] key to continue..."
 
