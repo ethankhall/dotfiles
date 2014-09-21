@@ -52,7 +52,7 @@ echo  "Install iStat5: http://bjango.com/mac/istatmenus/"
 echo  "Install Bartender: http://www.macbartender.com/"
 echo  "Install Marked: http://marked2app.com/"
 echo  "Install Sizeup: http://www.irradiatedsoftware.com/downloads/?file=SizeUp.zip"
-
+echo  "Install Fonts: https://github.com/fncll/vimstuff/tree/master/powerline-fonts"
 read -p "Press [Enter] key to continue..."
 
 echo "Run the following from ZSH"
