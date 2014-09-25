@@ -10,3 +10,6 @@
     cp = cherry-pick
 [mergetool]
     keepBackup = true
+[user]
+	email = ethan@ehdev.io
+	name = Ethan Hall
