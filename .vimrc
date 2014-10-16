@@ -1,5 +1,5 @@
 :filetype indent on
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set number
 
@@ -80,11 +80,6 @@ set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=2
-set tabstop=2
-set clipboard=unnamed
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
