@@ -17,7 +17,7 @@ brew install caskroom/cask/brew-cask
 
 brew cask install google-chrome iterm2 1password vagrant vagrant-manager \
     intellij-idea caskroom/versions/java7 sizeup marked bartender istat-menus \
-    virtualbox vmware-fusion caffeine flux dropbox
+    virtualbox vmware-fusion caffeine flux dropbox alfred
 
 # Install Pathogen for VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
