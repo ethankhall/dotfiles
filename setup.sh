@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Install Chrome: https://www.google.com/chrome/browser/#eula"
-read -p "Press [Enter] key to continue..."
-
 echo "Installing Brew"
 PERSONAL_DIR=~/workspace/personal
 
@@ -10,10 +7,17 @@ PERSONAL_DIR=~/workspace/personal
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 brew doctor
-brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace gradle groovy tmux ssh-copy-id tree watch htop-osx ansible wget
+brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace \
+    gradle groovy tmux ssh-copy-id tree watch htop-osx ansible wget \
+    git 
+    
 sudo chsh -s `which zsh` `whoami`
 
-read -p "Press [Enter] key to continue..."
+brew install caskroom/cask/brew-cask
+
+brew cask install google-chrome iterm2 1password vagrant vagrant-manager \
+    intellij-idea caskroom/versions/java7 sizeup marked bartender istat-menus \
+    virtualbox vmware-fusion caffeine flux dropbox
 
 # Install Pathogen for VIM
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -44,18 +48,13 @@ if [ "$(uname)" == "Darwin" ]; then
     defaults write -g ApplePressAndHoldEnabled -bool false
 fi
 
-echo  "Install VirtualBox: https://www.virtualbox.org/wiki/Downloads"
-echo  "Install Vagrant: http://www.vagrantup.com/downloads.html"
-echo  "Install iTerm2: http://iterm2.com/downloads.html"
-echo  "Install IntelliJ: http://www.jetbrains.com/idea/download/"
-echo  "Install iStat5: http://bjango.com/mac/istatmenus/"
-echo  "Install Bartender: http://www.macbartender.com/"
-echo  "Install Marked: http://marked2app.com/"
-echo  "Install Sizeup: http://www.irradiatedsoftware.com/downloads/?file=SizeUp.zip"
-echo  "Install Fonts: https://github.com/fncll/vimstuff/tree/master/powerline-fonts"
-read -p "Press [Enter] key to continue..."
-
-echo "Run the following from ZSH"
+sudo wget https://github.com/fncll/vimstuff/raw/master/powerline-fonts/Andale_Mono-Powerline.ttf --directory-prefix=/Library/Fonts/
+sudo wget https://github.com/fncll/vimstuff/raw/master/powerline-fonts/SourceCodePro-Black-Powerline.otf --directory-prefix=/Library/Fonts/
+sudo wget https://github.com/fncll/vimstuff/raw/master/powerline-fonts/SourceCodePro-Bold-Powerline.otf --directory-prefix=/Library/Fonts/
+sudo wget https://github.com/fncll/vimstuff/raw/master/powerline-fonts/SourceCodePro-ExtraLight-Powerline.otf --directory-prefix=/Library/Fonts/
+sudo wget https://github.com/fncll/vimstuff/raw/master/powerline-fonts/SourceCodePro-Light-Powerline.otf --directory-prefix=/Library/Fonts/
+sudo wget https://github.com/fncll/vimstuff/raw/master/powerline-fonts/SourceCodePro-Regular-Powerline.otf --directory-prefix=/Library/Fonts/
+sudo wget https://github.com/fncll/vimstuff/raw/master/powerline-fonts/SourceCodePro-Semibold-Powerline.otf --directory-prefix=/Library/Fonts/
 
 cat > zshconfig.sh << END
 #!/usr/bin/env zsh
@@ -64,3 +63,6 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
       ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 END
+
+chmod +x zshconfig.sh
+zsh ./zshconfig.sh
