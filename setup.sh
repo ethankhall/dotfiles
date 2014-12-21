@@ -4,7 +4,7 @@ echo "Installing Brew"
 PERSONAL_DIR=~/workspace/personal
 
 #Install brew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew doctor
 brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace \
