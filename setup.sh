@@ -11,7 +11,7 @@ brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-
     gradle groovy tmux ssh-copy-id tree watch htop-osx ansible wget \
     git dnsmasq npm
     
-npm install -g gulp-cli
+npm install -g gulp-cli bower
     
 sudo chsh -s `which zsh` `whoami`
 
@@ -67,4 +67,4 @@ done
 END
 
 chmod +x zshconfig.sh
-zsh ./zshconfig.sh
+`which zsh` ./zshconfig.sh
