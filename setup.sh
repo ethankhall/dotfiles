@@ -9,7 +9,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 brew install zsh zsh-completions zsh-lovers zsh-syntax-highlighting reattach-to-user-namespace \
     gradle groovy tmux ssh-copy-id tree watch htop-osx ansible wget \
-    git dnsmasq npm
+    git dnsmasq npm jq
     
 npm install -g gulp-cli bower
     
