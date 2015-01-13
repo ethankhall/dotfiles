@@ -15,6 +15,8 @@ npm install -g gulp-cli bower
     
 sudo chsh -s `which zsh` `whoami`
 
+gem install tmuxinator
+
 brew install caskroom/cask/brew-cask
 
 brew cask install google-chrome iterm2 1password vagrant vagrant-manager \
