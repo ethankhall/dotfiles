@@ -15,8 +15,11 @@
       - jq
       - ruby
 
-  - homebrew_tap: tap=caskroom/cask state=present
+  - homebrew_tap: tap="{{ items }}" state=present
     when: ansible_distribution == "MacOSX"
+    with_items:
+      - caskroom/cask
+      - caskroom/versions
 
   - name: install packages (mac)
     when: ansible_distribution == "MacOSX"
