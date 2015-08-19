@@ -37,6 +37,7 @@
       - dnsmasq
       - npm
       - jq
+      - caskroom/cask/brew-cask
 
   - name: install packages
     when: ansible_distribution == "MacOSX"
