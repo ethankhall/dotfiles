@@ -14,8 +14,8 @@
       - npm
       - jq
       - ruby
-  
-  - homebrew_tap: tap=caskroom/cask
+
+  - homebrew_tap: tap=caskroom/cask state=present
     when: ansible_distribution == "MacOSX"
 
   - name: install packages (mac)
@@ -40,7 +40,7 @@
       - dnsmasq
       - npm
       - jq
-      - caskroom/cask/brew-cask
+      - brew-cask
 
   - name: install packages
     when: ansible_distribution == "MacOSX"
