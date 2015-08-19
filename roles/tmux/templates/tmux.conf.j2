@@ -1,5 +1,6 @@
+# {{ ansible_managed }}
 # screen bindings
-unbind C-b 
+unbind C-b
 set -g prefix ^A
 bind a send-prefix
 
@@ -13,20 +14,19 @@ set -g history-limit 10000
 set -g default-terminal xterm-256color
 set -g set-titles on
 
-# initialize sessions
-bind S source-file ~/.tmux/standard
-
 ##################
 #  Copy / Paste ##
 ##################
+{% if ansible_distribution == "Darwin" %}
 # OSX Clipboard support
 #
-source ~/.tmux/tmux.clipboard
+set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 bind C-v run "tmux set-buffer $(reattach-to-user-namespace pbpaste); tmux paste-buffer"
 bind C-c run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+{% endif %}
 
 # copy tmux buffer to clipboard
 bind C-y run "tmux show-buffer | xsel -b"

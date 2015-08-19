@@ -1,4 +1,0 @@
-# configuration for osx clipboard support
- 
-  
-set-option -g default-command "reattach-to-user-namespace -l zsh"

@@ -1,0 +1,25 @@
+---
+
+  - hosts: all
+    tasks:
+     - group_by: key=os_{{ ansible_distribution }}
+
+
+  - hosts: os_CentOS:os_RedHat
+    sudo: yes
+    roles:
+      - goozbach.EPEL
+
+  - hosts: os_MacOSX
+    tasks:
+      - command: /usr/bin/defaults write NSGlobalDomain InitialKeyRepeat -int 12
+      - command: /usr/bin/defaults write NSGlobalDomain KeyRepeat -int 0.01
+      - command: /usr/bin/defaults write -g ApplePressAndHoldEnabled -bool false
+
+  - hosts: all
+    roles:
+      - packages
+      - tmux
+      - git
+      - zsh
+      - vim

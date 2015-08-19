@@ -1,0 +1,3 @@
+---
+  - name: update gitconfig
+    template: src=gitconfig.j2 dest="{{ ansible_user_dir }}/.gitconfig"

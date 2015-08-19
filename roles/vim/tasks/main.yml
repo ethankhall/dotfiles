@@ -1,0 +1,10 @@
+---
+  - file: dest="{{ ansible_user_dir }}/.vim/autoload" state=directory
+
+  - file: dest="{{ ansible_user_dir }}/.vim/bundle" state=directory
+
+  - get_url: url=https://tpo.pe/pathogen.vim dest="{{ ansible_user_dir }}/.vim/autoload/pathogen.vim"
+
+  - git:
+      repo: https://github.com/scrooloose/nerdtree.git
+      dest: "{{ ansible_user_dir }}/.vim/bundle/nerdtree"

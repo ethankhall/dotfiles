@@ -1,0 +1,60 @@
+---
+  - name: install packages (linux)
+    when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+    yum: name={{ item }} state=installed
+    sudo: yes
+    with_items:
+      - tmux
+      - git
+      - vim
+      - zsh
+      - tree
+      - htop
+      - ansible
+      - npm
+      - jq
+      - ruby
+
+  - name: install packages (mac)
+    when: ansible_distribution == "MacOSX"
+    homebrew: name={{ item }} state=installed
+    with_items:
+      - tmux
+      - git
+      - vim
+      - zsh
+      - zsh-completions
+      - zsh-lovers
+      - zsh-syntax-highlighting
+      - reattach-to-user-namespace
+      - gradle
+      - groovy
+      - ssh-copy-id
+      - watch
+      - htop-osx
+      - ansible
+      - wget
+      - dnsmasq
+      - npm
+      - jq
+
+  - name: install packages
+    when: ansible_distribution == "MacOSX"
+    homebrew_cask: name={{ item }} state=present
+    with_items:
+      - iterm2
+      - vagrant
+      - vagrant-manager
+      - caskroom/versions/java7
+      - sizeup
+      - marked
+      - bartender
+      - istat-menus
+      - virtualbox
+      - vmware-fusion
+      - caffeine
+      - flux
+      - dropbox
+      - alfred
+
+  - gem: name=tmuxinator state=latest
