@@ -15,7 +15,7 @@
       - jq
       - ruby
 
-  - homebrew_tap: tap="{{ items }}" state=present
+  - homebrew_tap: tap="{{ item }}" state=present
     when: ansible_distribution == "MacOSX"
     with_items:
       - caskroom/cask
@@ -57,7 +57,6 @@
       - marked
       - bartender
       - istat-menus
-      - virtualbox
       - vmware-fusion
       - caffeine
       - flux
