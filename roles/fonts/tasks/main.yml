@@ -1,0 +1,11 @@
+---
+  - name: add fonts to /Library/Fonts/
+    sudo: yes
+    copy: src={{ item }} dest=/Library/Fonts/{{ item }}
+    with_items:
+      - SourceCodePro-Black-Powerline.otf
+      - SourceCodePro-ExtraLight-Powerline.otf
+      - SourceCodePro-Regular-Powerline.otf
+      - SourceCodePro-Bold-Powerline.otf
+      - SourceCodePro-Light-Powerline.otf
+      - SourceCodePro-Semibold-Powerline.otf
