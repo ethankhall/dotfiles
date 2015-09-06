@@ -1,0 +1,21 @@
+---
+  - name: install packages (mac)
+    when: ansible_distribution == "MacOSX"
+    homebrew: name={{ item }} state=installed
+      - rbenv
+      - ruby-build
+
+  - name: install packages (linux)
+    when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+    sudo: yes
+    yum: name=rbenv
+
+  - name: install ruby 2.2.3
+    command: rbenv install 2.2.3 creates=~/.rbenv/versions/2.2.3/
+    when: ansible_distribution == "MacOSX"
+
+  - name: use ruby 2.2.3
+    command: rbenv global 2.2.3
+    when: ansible_distribution == "MacOSX"
+
+  - gem: name=tmuxinator state=latest

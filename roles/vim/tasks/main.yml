@@ -8,3 +8,7 @@
   - git:
       repo: https://github.com/scrooloose/nerdtree.git
       dest: "{{ ansible_user_dir }}/.vim/bundle/nerdtree"
+
+  - template:
+      src: vimrc.j2
+      dest: "{{ ansible_user_dir }}/.vimrc"

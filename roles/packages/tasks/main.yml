@@ -1,4 +1,9 @@
 ---
+  - name: install rpm repo (linux)
+    when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+    get_url: url=https://bintray.com/ethankhall/rpm/rpm dest=/etc/yum.repos.d/bintray-ethankhall-rpm.repo mode=0440
+    sudo: yes
+
   - name: install packages (linux)
     when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
     yum: name={{ item }} state=installed
@@ -13,9 +18,9 @@
       - ansible
       - npm
       - jq
-      - ruby
 
-  - homebrew_tap: tap="{{ item }}" state=present
+  - name: tab casks (mac)
+    homebrew_tap: tap="{{ item }}" state=present
     when: ansible_distribution == "MacOSX"
     with_items:
       - caskroom/cask
@@ -28,6 +33,7 @@
       - tmux
       - git
       - vim
+      - tig
       - zsh
       - zsh-completions
       - zsh-lovers
@@ -45,7 +51,7 @@
       - jq
       - brew-cask
 
-  - name: install packages
+  - name: install cask packages (mac)
     when: ansible_distribution == "MacOSX"
     homebrew_cask: name={{ item }} state=present
     with_items:
@@ -62,5 +68,3 @@
       - flux
       - dropbox
       - alfred
-
-  - gem: name=tmuxinator state=latest

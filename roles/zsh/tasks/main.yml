@@ -7,6 +7,7 @@
       repo: https://github.com/ethankhall/prezto.git
       recursive: yes
       dest: "{{ ansible_user_dir }}/.zprezto"
+      force: yes
 
   - file:
       src: "{{ ansible_user_dir }}/.zprezto/runcoms/{{ item }}"

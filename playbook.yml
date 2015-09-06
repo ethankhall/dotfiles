@@ -20,8 +20,9 @@
 
   - hosts: all
     roles:
-      - packages
-      - tmux
-      - git
-      - zsh
-      - vim
+      - { role: 'packages', tags: ['packages'] }
+      - { role: "tmux", tags: ['tmux'] }
+      - { role: 'git', tags: ['git'] }
+      - { role: 'zsh', tags: ['zsh'] }
+      - { role: 'vim', tags: ['vim'] }
+      - { role: 'ruby', tags: ['ruby'] }
