@@ -29,7 +29,8 @@ fi
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export IDEA_JDK="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"
 
-export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
+#export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
+export JAVA_HOME=`/usr/libexec/java_home`
 export FUSION_APP_PATH=$HOME/Applications/VMware\ Fusion.app
 
 if [ -e ~/.conf/zsh ]; then
