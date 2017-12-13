@@ -5,11 +5,6 @@
      - group_by: key=os_{{ ansible_distribution }}
 
 
-  - hosts: os_CentOS:os_RedHat
-    sudo: yes
-    roles:
-      - goozbach.EPEL
-
   - hosts: os_MacOSX
     tasks:
       - command: /usr/bin/defaults write NSGlobalDomain InitialKeyRepeat -int 12
@@ -25,4 +20,3 @@
       - { role: 'git', tags: ['git'] }
       - { role: 'zsh', tags: ['zsh'] }
       - { role: 'vim', tags: ['vim'] }
-      - { role: 'ruby', tags: ['ruby'] }

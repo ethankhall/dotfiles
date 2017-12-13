@@ -23,7 +23,6 @@
     homebrew_tap: tap="{{ item }}" state=present
     when: ansible_distribution == "MacOSX"
     with_items:
-      - caskroom/cask
       - caskroom/versions
 
   - name: install packages (mac)
@@ -49,22 +48,4 @@
       - dnsmasq
       - npm
       - jq
-      - brew-cask
 
-  - name: install cask packages (mac)
-    when: ansible_distribution == "MacOSX"
-    homebrew_cask: name={{ item }} state=present
-    with_items:
-      - iterm2
-      - vagrant
-      - vagrant-manager
-      - java7
-      - sizeup
-      - marked
-      - bartender
-      - istat-menus
-      - vmware-fusion
-      - caffeine
-      - flux
-      - dropbox
-      - alfred
