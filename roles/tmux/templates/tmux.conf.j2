@@ -1,5 +1,4 @@
 # {{ ansible_managed }}
-# Ansible managed: /Users/ethall/dotfiles/roles/tmux/templates/tmux.conf.j2 modified on 2015-11-10 13:52:50 by ethall on ethall-mn2
 # screen bindings
 unbind C-b
 set -g prefix ^A
@@ -85,7 +84,7 @@ setw -g monitor-activity on
 bind | split-window -h
 bind - split-window -v
 
-# Fix reattach...
 {% if ansible_distribution == "Darwin" %}
+# Fix reattach...
 set -g default-command "reattach-to-user-namespace -l /usr/local/bin/zsh"
 {% endif %}
