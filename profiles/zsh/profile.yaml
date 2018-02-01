@@ -1,0 +1,16 @@
+run:
+  - template:
+      src: zshrc
+      dest: "@HOME@/.zshrc"
+
+  - exec:
+      command: if cd @HOME@/.zprezto; then git pull --recurse-submodules ; else git clone --recursive https://github.com/ethankhall/prezto.git @HOME@/.zprezto; fi
+
+  - exec:
+      command: ln -sf @HOME@/.zprezto/runcoms/@item@ @HOME@/.@item@
+      items:
+          - zlogin
+          - zlogout
+          - zpreztorc
+          - zprofile
+          - zshenv

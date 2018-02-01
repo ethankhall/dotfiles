@@ -11,5 +11,5 @@
 [mergetool]
     keepBackup = true
 [user]
-	email = {{ email_address }}
-	name = {{ full_name }}
+	email = @email_address@
+	name = @full_name@

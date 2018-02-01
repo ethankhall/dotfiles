@@ -1,0 +1,4 @@
+run:
+  - template:
+      src: gitconfig
+      dest: "@HOME@/.gitconfig"
