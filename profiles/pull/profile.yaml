@@ -1,0 +1,3 @@
+run:
+  - exec:
+      command: git --work-tree=@PROFILE_DIR@/../.. --git-dir=@PROFILE_DIR@/../../.git pull
