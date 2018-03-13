@@ -1,0 +1,4 @@
+run:
+  - template:
+      src: tmux.conf
+      dest: "@HOME@/.tmux.conf"
