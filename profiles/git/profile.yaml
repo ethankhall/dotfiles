@@ -2,3 +2,6 @@ run:
   - template:
       src: gitconfig
       dest: "@HOME@/.gitconfig"
+  - template:
+      src: gitignore_global
+      dest: "@HOME@/.gitignore_global"
