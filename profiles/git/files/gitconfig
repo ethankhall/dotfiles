@@ -15,3 +15,7 @@
     name = @full_name@
 [commit]
     gpgsign = true
+[core]
+    excludesfile = /Users/ethan/.gitignore_global
+[pull]
+    rebase = true
