@@ -1,0 +1,4 @@
+run:
+  - template:
+      src: bash_profile
+      dest: "@HOME@/.bash_profile"

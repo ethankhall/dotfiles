@@ -1,0 +1,9 @@
+run:
+  - exec:
+      command: mkdir -p "@HOME@/.gnupg"
+  - template:
+      src: gpg-agent.conf
+      dest: "@HOME@/.gnupg/gpg-agent.conf"
+  - template:
+      src: gpg.conf
+      dest: "@HOME@/.gnupg/gpg.conf"
