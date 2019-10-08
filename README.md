@@ -6,3 +6,5 @@ Contains the setup for some of my Dot Files.
 
 # Auto setup
     bash <(curl -s https://raw.githubusercontent.com/ethankhall/dotfiles/master/setup.sh)
+
+Some chnage
